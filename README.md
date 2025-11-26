@@ -1,52 +1,55 @@
-📖 Project Overview
-This project aims to analyze the spatial-level differences in gene expression within brain tissue. By leveraging Spatial Transcriptomics (Method of the Year 2020) and the GASTON deep learning method, we successfully mapped the topography of tissue slices and identified distinct functional layers through differential expression analysis.
+# Gene Differential Expression Analysis Based on Spatial Transcriptome Data
 
+**Group:** 17th Group
+**Date:** April 8th, 2025
 
-🧬 Background
-The brain exhibits significant spatial heterogeneity in gene expression. Traditional bulk sequencing loses this spatial context. We utilized the methodology described in the paper "Mapping the topography of spatial gene expression with interpretable deep learning" to reproduce the GASTON method. This approach allows for the identification of continuous spatial domains (isodepths) and gene expression gradients.
+---
 
+## 📖 Project Overview
+This project investigates the **spatial-level differences in gene expression** within the brain. By utilizing **Spatial Transcriptomics** techniques and reproducing the **GASTON** deep learning method, we successfully mapped the topography of tissue slices and identified distinct functional layers through differential expression analysis.
 
-📂 Dataset
-Source: Gene Expression Omnibus (GEO) 
-Accession Number: GSE184510 
-Specific Sample Used: GSM5591748 (HE_ON_2339) 
+## 📂 Dataset
+* **Source:** Gene Expression Omnibus (GEO)
+* **Sample ID:** `GSM5591748` (HE_ON_2339).
 
+## 🛠 Methodology
+1.  **Data Preprocessing:** Processing spatial coordinates and gene expression vectors.
+2.  **GASTON Reproduction:** We utilized the GASTON method (Generative Adversarial Spatial Transcriptomics Networks) to learn the "topography" of the tissue slice, identifying continuous spatial domains and isodepths.
+3.  **Clustering:** Post-GASTON processing involved clustering to unveil distinct brain layers.
+4.  **Differential Expression Analysis:** We performed analysis to identify marker genes and determine biological functions for each layer.
 
-🛠 Methodology
-Data Preprocessing: Input spatial coordinates and gene expression vectors.
-GASTON Implementation: We reproduced the GASTON method to learn the "topography" of the tissue slice from spatial transcriptomics data.
-Clustering: Post-GASTON processing involved clustering to unveil distinct brain layers (Layer 0, 1, 2, 3).
-Differential Expression Analysis: We performed differential gene expression analysis across the identified layers to determine their biological functions and cell-type dominance.
+---
 
+## 📊 Key Results: Layer Characterization
 
-📊 Key Results: Layer Characterization
 Our analysis identified four distinct layers with specific gene expression signatures:
 
-Layer 3: White Matter / Oligodendrocytes
-Characteristics: Dominated by oligodendrocytes; associated with myelination and neuroprotection.
-Key Marker Genes:
-MBP (Myelin Basic Protein) 
-PLP1 (Proteolipid Protein 1) 
-CLDND1 (Intercellular connectivity) 
-CRYAB (Heat shock protein) 
+### **Layer 3: White Matter / Oligodendrocytes**
+* **Biological Function:** Dominated by oligodendrocytes; associated with myelination and neuroprotection.
+* **Key Marker Genes:**
+  * `MBP`: The important protein of myelination.
+  * `PLP1`: The main protein of myelination.
+  * `CLDND1`: Intercellular connectivity & barrier function.
+  * `CRYAB`: Heat shock protein.
 
-Layer 2: Gray Matter / Neurons
-Characteristics: Dominated by neurons; associated with nerve signaling and synaptic function.
-Key Marker Genes:
-SNAP25 (Synaptic vesicle fusion) 
-SYT1 (Ca-dependent neurotransmitter release) 
-VSNL1 (Neuronal Ca2+ sensor) 
+### **Layer 2: Gray Matter / Neurons**
+* **Biological Function:** A functional area dominated by neurons; associated with nerve signaling and synaptic function.
+* **Key Marker Genes:**
+  * `SNAP25`: Key protein for synaptic vesicle fusion.
+  * `SYT1`: Ca-dependent neurotransmitter release.
+  * `VSNL1`: Neuronal Ca2+ sensor protein family.
 
-Layer 1: Mixed Region
-Characteristics: Represents a transition or mixed region containing both white matter (oligodendrocytes) and gray matter (neurons).
+### **Layer 1: Mixed Region**
+* **Biological Function:** Represents a mixed region containing both white matter (oligodendrocytes) and gray matter (neurons).
 
-Layer 0: Non-Neuronal / Low Activity
-Characteristics: Lacks significant neuronal or myelin-related functions. This region may be rich in other cell types like astrocytes or microglia, or represents less functionally active brain tissue.
+### **Layer 0: Non-Neuronal / Low Activity**
+* **Biological Function:** Lacks significant neuronal or myelin-related functions.
+* **Hypothesis:** May be rich in other cell types (e.g., astrocytes or microglia) or represent less functionally active brain tissue.
 
+---
 
-🔗 References
-
-Nature Methods, Vol 18 No. 1 (Jan 2021) 
-Chitra, U., et al. "Mapping the topography of spatial gene expression with interpretable deep learning." 
-Ortiz C et al., Annu Rev Neurosci., 2021 
-Mohammadi, E., et al. "Size matters: the impact of nucleus size on results from spatial transcriptomics."
+## 🔗 References
+1.  *Nature Methods*, "Method of the Year 2020: Spatially resolved transcriptomics", Vol 18 No. 1 (Jan 2021).
+2.  Chitra, U., et al. "Mapping the topography of spatial gene expression with interpretable deep learning".
+3.  Ortiz C et al., *Annu Rev Neurosci.*, 2021.
+4.  Mohammadi, E., et al. "Size matters: the impact of nucleus size on results from spatial transcriptomics".
